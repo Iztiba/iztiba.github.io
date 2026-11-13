@@ -2,82 +2,277 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Data Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Name | Professional Portfolio</title>
+<meta name="description" content="Business Technology Management graduate portfolio showcasing business analysis, data analytics and technology projects.">
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #f4f6f9;
-            color: #222;
-        }
+<style>
+:root {
+    --navy: #172554;
+    --blue: #2563eb;
+    --light: #f8fafc;
+    --text: #1e293b;
+    --muted: #64748b;
+}
 
-        header {
-            background: #172554;
-            color: white;
-            text-align: center;
-            padding: 60px 20px;
-        }
+* { box-sizing: border-box; scroll-behavior: smooth; }
 
-        section {
-            max-width: 850px;
-            margin: 30px auto;
-            padding: 25px;
-            background: white;
-            border-radius: 10px;
-        }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--light);
+    color: var(--text);
+    line-height: 1.7;
+}
 
-        a {
-            color: #2563eb;
-        }
-    </style>
+nav {
+    background: white;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 10px #00000008;
+}
+
+nav strong { color: var(--navy); font-size: 20px; }
+
+nav a {
+    text-decoration: none;
+    color: var(--text);
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+.hero {
+    background: var(--navy);
+    color: white;
+    padding: 110px 8%;
+}
+
+.hero-content { max-width: 850px; }
+
+.hero .tag {
+    color: #93c5fd;
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+h1 { font-size: clamp(36px, 6vw, 58px); line-height: 1.15; }
+
+.hero p { color: #cbd5e1; max-width: 650px; }
+
+.btn {
+    display: inline-block;
+    background: var(--blue);
+    color: white;
+    padding: 12px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 18px;
+}
+
+section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 75px 30px;
+}
+
+.section-label {
+    color: var(--blue);
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+h2 { font-size: 30px; color: var(--navy); }
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+}
+
+.card h3 { color: var(--navy); }
+
+.skills span {
+    display: inline-block;
+    background: #dbeafe;
+    color: #1e40af;
+    padding: 8px 14px;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 14px;
+}
+
+.project {
+    border-left: 4px solid var(--blue);
+}
+
+.project a {
+    color: var(--blue);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    background: var(--navy);
+    color: white;
+    text-align: center;
+    padding: 35px;
+}
+
+footer a { color: #93c5fd; }
+
+@media(max-width:650px) {
+    nav { flex-direction: column; gap: 12px; }
+    nav a { margin: 5px; }
+    .hero { padding: 75px 7%; }
+    section { padding: 55px 22px; }
+}
+</style>
 </head>
 
 <body>
 
-<header>
-    <h1>Your Name</h1>
-    <p>Aspiring Data Analyst | SQL | Python | Power BI</p>
-    <p>Welcome to my professional portfolio</p>
+<nav>
+    <strong>MY PORTFOLIO.</strong>
+    <div>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<header class="hero">
+    <div class="hero-content">
+        <div class="tag">BUSINESS TECHNOLOGY & ANALYTICS</div>
+        <h1>Hello, I'm Your Name.</h1>
+        <p>
+            Business Technology Management graduate with
+            experience in IT support and software implementation.
+            Interested in business analysis, data analytics and
+            technology-driven problem solving.
+        </p>
+        <a class="btn" href="#projects">Explore My Work</a>
+    </div>
 </header>
 
-<section>
-    <h2>About Me</h2>
+<section id="about">
+    <div class="section-label">01 / ABOUT ME</div>
+    <h2>A little about me</h2>
     <p>
-        I am interested in data analytics, business intelligence
-        and transforming data into meaningful insights.
+        I have a background in Business Technology Management
+        from Seneca Polytechnic, combining business knowledge
+        with technology and practical IT experience.
+    </p>
+    <p>
+        I'm developing my analytical and technical skills to
+        turn business problems into actionable insights.
+        I enjoy learning new technologies, solving problems
+        and exploring how data can improve decision-making.
     </p>
 </section>
 
-<section>
-    <h2>My Skills</h2>
-    <ul>
-        <li>SQL</li>
-        <li>Python</li>
-        <li>Microsoft Excel</li>
-        <li>Power BI</li>
-        <li>Data Visualization</li>
-    </ul>
+<section id="skills">
+    <div class="section-label">02 / SKILLS</div>
+    <h2>Technical toolkit</h2>
+    <p>Technologies and tools I'm developing and working with.</p>
+
+    <div class="skills">
+        <span>SQL</span>
+        <span>Python</span>
+        <span>Microsoft Excel</span>
+        <span>Power BI</span>
+        <span>Data Visualization</span>
+        <span>Business Analysis</span>
+        <span>IT Support</span>
+        <span>Software Implementation</span>
+    </div>
 </section>
 
-<section>
-    <h2>My Projects</h2>
-    <p>Project 1: SQL Data Analysis</p>
-    <p>Project 2: Power BI Dashboard</p>
-    <p>Project 3: Python Data Analysis</p>
+<section id="projects">
+    <div class="section-label">03 / PORTFOLIO</div>
+    <h2>Featured projects</h2>
+    <p>Practical projects demonstrating my technical and business skills.</p>
+
+    <div class="cards">
+
+        <div class="card project">
+            <h3>SQL Data Analysis</h3>
+            <p>
+                Exploring datasets using SQL queries,
+                joins, aggregations and data analysis.
+            </p>
+            <p><b>Tools:</b> SQL</p>
+            <a href="YOUR_SQL_PROJECT_LINK">View project →</a>
+        </div>
+
+        <div class="card project">
+            <h3>Business Intelligence Dashboard</h3>
+            <p>
+                Building interactive dashboards to
+                analyze business performance and KPIs.
+            </p>
+            <p><b>Tools:</b> Power BI, Excel</p>
+            <a href="YOUR_POWERBI_PROJECT_LINK">View project →</a>
+        </div>
+
+        <div class="card project">
+            <h3>Python Data Analysis</h3>
+            <p>
+                Cleaning, exploring and visualizing
+                datasets to identify useful insights.
+            </p>
+            <p><b>Tools:</b> Python, Pandas</p>
+            <a href="YOUR_PYTHON_PROJECT_LINK">View project →</a>
+        </div>
+
+    </div>
 </section>
 
-<section>
-    <h2>Contact</h2>
+<section id="education">
+    <div class="section-label">04 / EDUCATION</div>
+    <h2>Education & certifications</h2>
+    <div class="card">
+        <h3>Bachelor of Commerce</h3>
+        <p>Business Technology Management</p>
+        <p>Seneca Polytechnic</p>
+    </div>
+    <div class="card" style="margin-top:15px">
+        <h3>Certifications</h3>
+        <p>Add your completed certifications here.</p>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="section-label">05 / GET IN TOUCH</div>
+    <h2>Let's connect.</h2>
+    <p>Interested in business analysis, data and technology?</p>
     <p>
-        <a href="https://www.linkedin.com/">LinkedIn</a>
-    </p>
-    <p>
-        <a href="https://github.com/">GitHub</a>
+        <a href="YOUR_LINKEDIN_URL">LinkedIn</a> |
+        <a href="YOUR_GITHUB_URL">GitHub</a> |
+        <a href="mailto:YOUR_EMAIL">Email me</a>
     </p>
 </section>
+
+<footer>
+    <p>© 2026 Your Name | Personal Portfolio</p>
+    <p>Built with HTML, CSS & GitHub Pages.</p>
+</footer>
 
 </body>
 </html>
